@@ -7,7 +7,7 @@
 <?php
 	 include"top_nav.php";
 ?>
-	
+
     <!-- Page Content -->
     <div class="container" style="margin-top:70px;">
 
@@ -24,13 +24,13 @@
 						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 						<strong>Success!</strong> Your message has been Successfully sent.
 					</div>
-					
-					
+
+
 					';
 				}
 					}
 				?>
-		
+
 				<h3 class='text-primary'>Send us a Message</h3>
                 <form method="post" action="contact.php" role="form" >
                     <div class="control-group form-group">
@@ -62,41 +62,10 @@
                     <!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary" name="submit"><i class='fa fa-send'></i> Send Message</button>
                 </form>
-				
+
 			</div>
-			
-            <div class="col-md-4">
-                <h3 class='text-primary'>Contact Details</h3>
-                <p>
-                    Blood Bank &amp; <br>Friend Medical Trust, <br>
-					34/44 ,Cherry Street,<br>
-					Nethimedu-627813.<br>
-					Salem Dt.
-                </p>
-                <p><i class="fa fa-phone"></i> 
-                    <abbr title="Phone">P</abbr>: 908776655</p>
-                <p><i class="fa fa-envelope-o"></i> 
-                    <abbr title="Email">E</abbr>: <a href="#" >bloodbankin@gmail.com</a>
-                </p>
-                <p><i class="fa fa-clock-o"></i> 
-                    <abbr title="Hours">H</abbr>: 24*7</p>
-				<p><i class="fa fa-globe"></i> 
-                    <abbr title="Website">W</abbr>: <a href="index.php">www.bloodbank.org</a></p>
-                <ul class="list-unstyled list-inline list-social-icons">
-                    <li>
-                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                    </li>
-                </ul>
-            </div>
+
+          
         </div>
 
 
@@ -112,7 +81,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-   
+
 
 </body>
 
