@@ -20,19 +20,19 @@
             <div class="item active">
                 <div class="fill" style="background-image:url('images/s1.jpg');"></div>
                 <div class="carousel-caption">
-                    
+
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('images/s2.jpg');"></div>
                 <div class="carousel-caption">
-                   
+
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('images/s3.jpg');"></div>
                 <div class="carousel-caption">
-                    
+
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
             </div>
-			 
+
 			  <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-			 
+
         </div>
         <!-- /.row -->
 
@@ -135,10 +135,10 @@
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header  text-primary">Why we need you to give blood ?</h2>
+                <h2 class="page-header  text-primary">Why we need to sell blood ?</h2>
             </div>
             <div class="col-md-6">
-              
+
 
 			<ul>
 				<li>Giving blood saves lives. The blood you give is a lifeline in an emergency and for people who need long-term treatments.</li>
@@ -167,14 +167,14 @@
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
-                    <p>We expect your loyal feedback to improve our standard.For more details and any subject related queries..</p>
+                    <p>Browse Open 24/7 Delivery by Hospitals</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-primary btn-block" href="contact.php"><i class="fa fa-phone"></i> Call to Action</a>
+                    <a class="btn btn-primary btn-block" href="about.php"><i class="fa fa-shopping-cart fa-l"></i> Buy From Stock</a>
                 </div>
             </div>
         </div>
-		
+
 		<div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -202,7 +202,7 @@
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-	
+
 	$(".img-portfolio").click(function(){
 		var a=$(this).attr("src");
 		$("#ModalImg").attr("src",a);
