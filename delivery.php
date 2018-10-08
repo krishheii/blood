@@ -67,7 +67,7 @@
 
 
 																						<div class="row">
-																							<div style=" width: 600px">
+																							<div style=" width: 570px">
 																								<div >
 																									<div class="panel-heading">
 																										<h3 class="panel-title"><strong  style="color:white;">Order summary</strong></h3>
@@ -77,9 +77,9 @@
 																											<table class="table table-condensed">
 																												<thead>
 																																				<tr>
-																															<td ><strong>Item</strong></td>
+																															<td ><strong>Blood Group</strong></td>
 																															<td class="text-center" ><strong>Price</strong></td>
-																															<td class="text-center"><strong>Quantity</strong></td>
+																															<td class="text-center"><strong>Unit</strong></td>
 																															<td class="text-center"><strong>Totals</strong></td>
 																																				</tr>
 																												</thead>
@@ -102,7 +102,7 @@
 																													<tr>
 																														<td class="no-line"></td>
 																														<td class="no-line"></td>
-																														<td class="no-line text-center"><strong>Shipping</strong></td>
+																														<td class="no-line text-center"><strong>Delivery</strong></td>
 																														<td class="no-line text-center">$15</td>
 																													</tr>
 																													<tr>
