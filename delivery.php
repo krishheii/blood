@@ -61,13 +61,15 @@
             </div>
 						<! Receipt details>
             <div class="col-md-6">
-                <h2 class="text-primary">Invoice</h2>
-								<hr style="width: 700px">
-								<div class="container">
+							<?php
+								if (isset($_POST["select_group"])&&isset($_POST["select_unit"])){
+                echo'<h2 class="text-primary">Invoice</h2>
+
+								<div class="container" style=" width: 100%; ">
 
 
 																						<div class="row">
-																							<div style=" width: 570px">
+																							<div  >
 																								<div >
 																									<div class="panel-heading">
 																										<h3 class="panel-title"><strong  style="color:white;">Order summary</strong></h3>
@@ -82,16 +84,24 @@
 																															<td class="text-center"><strong>Unit</strong></td>
 																															<td class="text-center"><strong>Totals</strong></td>
 																																				</tr>
-																												</thead>
-																												<tbody>
-																													<!-- foreach ($order->lineItems as $line) or some such thing here -->
+																												</thead>';
 
 
-																																				<tr>
-																																<td>BS-1000</td>
-																														<td class="text-center">$600.00</td>
-																														<td class="text-center">1</td>
-																														<td class="text-center" >$600.00</td>
+
+
+
+
+																												echo "<tbody>
+
+
+
+																														<tr>";
+
+
+																												 		echo"<td>".$_POST["select_group"]."</td>";
+																												  	echo'<td class="text-center">$600.00</td>';
+																														echo'<td class="text-center">'.$_POST["select_unit"].'</td>';
+																														echo'<td class="text-center" >$600.00</td>
 																													</tr>
 																													<tr>
 																														<td class="thick-line"></td>
@@ -111,7 +121,9 @@
 																														<td class="no-line text-center"><strong>Total</strong></td>
 																														<td class="no-line text-center">$685.99</td>
 																													</tr>
-																												</tbody>
+																												</tbody> ';}  ?>
+
+
 																											</table>
 																										</div>
 																									</div>
@@ -119,6 +131,7 @@
 																							</div>
 																						</div>
 																						</div>
+
 
             </div>
         </div>
