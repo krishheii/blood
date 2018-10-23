@@ -64,6 +64,7 @@
 							<?php
 								if (isset($_POST["select_group"])&&isset($_POST["select_unit"])){
                 echo'<h2 class="text-primary">Invoice</h2>
+								<hr>
 
 								<div class="container" style=" width: 100%; ">
 
@@ -121,7 +122,37 @@
 																														<td class="no-line text-center"><strong>Total</strong></td>
 																														<td class="no-line text-center">$685.99</td>
 																													</tr>
-																												</tbody> ';}  ?>
+
+
+
+																												</tbody> ';}
+
+																											/* ADDING DATA TO DATABASE */
+
+																											if (isset($_POST["select_group"])&&($_POST["select_unit"])&&($_POST["D_adress"]))
+																											{
+																												$sql= "SELECT * FROM delivery WHERE ID=(SELECT MAX(ID) FROM delivery)";
+																												$result = mysqli_query($con, $sql);
+
+
+																												$row = mysqli_fetch_assoc($result);
+																												$new_ID = $row['ID'] + 1;
+																												$sql = " INSERT INTO delivery (ID, D_BGROUP, D_UNIT, D_ADDRESS)
+        																								VALUES ('$new_ID','$_POST[select_group]','$_POST[select_unit]','$_POST[D_adress]')";
+
+																																if ($con->query($sql) === TRUE) {
+																														    echo " ";
+																														} else {
+																														    echo "Error: " . $sql . "<br>" . $con->error;
+																														}
+
+																											}
+
+
+
+
+
+																												  ?>
 
 
 																											</table>
