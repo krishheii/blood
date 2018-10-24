@@ -9,127 +9,27 @@
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('images/s1.jpg');"></div>
-                <div class="carousel-caption">
+        <div class="fill" style="background-image:url('images/s1.jpg');">
 
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('images/s2.jpg');"></div>
-                <div class="carousel-caption">
 
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('images/s3.jpg');"></div>
-                <div class="carousel-caption">
-
-                </div>
-            </div>
         </div>
 
         <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+
     </header>
 
     <!-- Page Content -->
     <div class="container">
 
         <!-- Marketing Icons Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header text-primary">
-                   Online Blood Bank Management System
-                </h1>
-            </div>
-            		 <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-user"></i> Donor Registration</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Have you at anytime witnessed a relative of yours or a close friend searching frantically for a blood donor, when blood banks say out of stock, the donors in mind are out of reach and the time keeps ticking?This thought laid our foundation. </p>
-                        <a href="Donor_reg.php" class="btn btn-primary">View More</a>
-                    </div>
-                </div>
-            </div>
-			 <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-medkit"></i> Need Blood</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Every 2 seconds someone needs blood. Your blood helps more than one life at a time. Accident victims, premature babies, patients undergoing major surgeries require whole blood, where your blood after testing is used directly.  </p>
-                        <a href="request_blood.php" class="btn btn-primary">View More</a>
-                    </div>
-                </div>
-            </div>
 
-			  <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-search"></i>Search Donor</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Some people who have serious injuries they need blood transfusions to replace blood lost during the injury.Regular blood donors ensure that a safe and plentiful supply of blood is available whenever and wherever it is needed.</p>
-                        <a href="Search_Donor.php" class="btn btn-primary">View More</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         <!-- /.row -->
 
         <!-- Portfolio Section -->
-      <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header  text-primary">Blood Donor Camps</h2>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p1.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p2.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p3.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p4.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p5.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="#">
-                    <img class="img-responsive img-portfolio img-thumbnail img-hover" src="images/p6.jpg" alt="">
-                </a>
-            </div>
-        </div>
+
         <!-- /.row -->
 
         <!-- Features Section -->
@@ -170,7 +70,7 @@
                     <p>Browse Open 24/7 Delivery by Hospitals</p>
                 </div>
                 <div class="col-md-4">
-                    <a class="btn btn-primary btn-block" href="about.php"><i class="fa fa-shopping-cart fa-l"></i> Buy From Stock</a>
+                    <a class="btn btn-primary btn-block" href="delivery.php"><i class="fa fa-shopping-cart fa-l"></i> Buy From Stock</a>
                 </div>
             </div>
         </div>
