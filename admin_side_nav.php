@@ -22,6 +22,7 @@ else
 	<li><a href="admin_ndonor.php"><i class="fa fa-users fa-lg text-danger"></i> Not Active Donors</a></li>
 	<li><a href="admin_need_blood.php"><i class="fa fa-bed fa-lg"></i> Need Blood</a></li>
 	<li><a href="admin_need_stock.php"><i class="fa fa-shopping-cart fa-lg"></i> Stock Details</a></li>
+	<li><a href="admin_delivery.php"><i class="fa fa-truck fa-lg"></i> Delivery Item</a></li>
 	<hr>
 	<li><a href="#add" data-toggle="collapse" ><i class="fa fa-cogs fa-lg"></i> Settings</a></li>
 	<ul class="nav collapse" id="add">
