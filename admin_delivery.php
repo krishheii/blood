@@ -38,7 +38,7 @@ if($result->num_rows>0)
 						<span   class="pull-right">
 
 
-							<a href="admin_mess_del.php?id='.$row['ID'].'"  class="btn btn-danger btn-xs">Delete</a>
+							<a href="admin_delivery_del.php?id='.$row['ID'].'"  class="btn btn-danger btn-xs">Deliverd</a>
 						</span>
 
 					</li>';
@@ -50,7 +50,7 @@ if($result->num_rows>0)
 }
 else
 {
-	echo "<div class='alert alert-info mess'>No More Messages</div>";
+	echo "<div class='alert alert-info mess'>No More Delivery</div>";
 }
 
 
