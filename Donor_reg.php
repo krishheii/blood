@@ -1,6 +1,6 @@
-<?php 
-include("config.php"); 
-//include("functions.php"); 
+<?php
+include("config.php");
+//include("functions.php");
 
 error_reporting(0);?>
 <!DOCTYPE html>
@@ -23,15 +23,15 @@ include("top_nav.php");
 
             </div>
         </div>
-	
-	
+
+
 			<div class="row centered-form ">
 		    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 				<?php
 					if(isset($_POST["submit"]))
 					{
-						
-										
+
+
 $target_dir = "donor_image/";
 $img="donor_image/noimage.jpg";
 $target_file = $target_dir.rand(100,999). basename($_FILES["fileToUpload"]["name"]);
@@ -103,10 +103,10 @@ if($res->num_rows>0)
 $cityname=$_POST["CITY"];
 
 $sql="
-INSERT INTO blood_donor 
-(NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, VOLUNTARY, VOLUNTARY_GROUP,NEW_DONOR, LAST_D_DATE, DONOR_PIC,COUNTRY)
- VALUES 
- ('{$_POST["NAME"]}', '{$_POST["FATHER_NAME"]}', '{$_POST["GENDER"]}', '{$_POST["DOB"]}', '{$_POST["BLOOD"]}', '{$_POST["BODY_WEIGHT"]}', '{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["VOLUNTARY"]}', '{$_POST["VOLUNTARY_GROUP"]}', '{$_POST["NEW_DONOR"]}','{$_POST["LAST_D_DATE"]}', '{$img}','{$country}');";
+INSERT INTO blood_donor
+(username,password,NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, VOLUNTARY, VOLUNTARY_GROUP,NEW_DONOR, LAST_D_DATE, DONOR_PIC,COUNTRY)
+ VALUES
+ ('{$_POST["USERNAME"]}','{$_POST["PASSWORD"]}','{$_POST["NAME"]}', '{$_POST["FATHER_NAME"]}', '{$_POST["GENDER"]}', '{$_POST["DOB"]}', '{$_POST["BLOOD"]}', '{$_POST["BODY_WEIGHT"]}', '{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["VOLUNTARY"]}', '{$_POST["VOLUNTARY_GROUP"]}', '{$_POST["NEW_DONOR"]}','{$_POST["LAST_D_DATE"]}', '{$img}','{$country}');";
 						if($con->query($sql))
 							{
 								echo '
@@ -116,15 +116,29 @@ INSERT INTO blood_donor
 								</div>
 								';
 							}
+							else {
+    								echo("Error description: " . mysqli_error($con));
+										}
+
 					}
 				?>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center" style="padding:5px;font-size:16px;font-weight:bold"><span class="fa fa-user "> </span> JOIN AS BLOOD DONOR</h3>
                     </div>
-					
+
                     <div class="panel-body">
 						<form method="post" action="Donor_reg.php" autocomplete="off" role="form" enctype="multipart/form-data">
+						<div class="form-group">
+							<label class="control-label text-primary" for="USERNAME" >Username</label>
+							<input type="text" placeholder="username" id="USERNAME" name="USERNAME"  required class="form-control input-sm">
+						</div>
+						<div class="form-group">
+							<label class="control-label text-primary" for="PASSWORD" >Password</label>
+							<input type="text" placeholder="Password" id="PASSWORD" name="PASSWORD"  required class="form-control input-sm">
+						</div>
+
+
 						<div class="form-group">
 							<label class="control-label text-primary" for="NAME" >Name</label>
 							<input type="text" placeholder="Full Name" id="NAME" name="NAME"  required class="form-control input-sm">
@@ -133,7 +147,7 @@ INSERT INTO blood_donor
 							<label class="control-label text-primary" for="FATHER_NAME">Father Name</label>
 							<input type="text" placeholder="Father Name" id="FATHER_NAME" name="FATHER_NAME" required class="form-control input-sm">
 						</div>
-						
+
 						<div class="form-group">
 							<label class="control-label text-primary"  for="GENDER">Gender</label>
 								<select id="gen" name="GENDER" required class="form-control input-sm">
@@ -144,16 +158,16 @@ INSERT INTO blood_donor
 									<option value="Thirunambi">Thirunambi</option>
 								</select>
 						</div>
-						
+
 						<div class="form-group">
 							<label class="control-label text-primary" for="DOB">D.O.B</label>
 							<input type="text"  placeholder="YYYY/MM/DD" required id="DOB" name="DOB"  class="form-control input-sm DATES">
 						</div>
-						
-						
+
+
 						<div class="form-group">
 							<label class="control-label text-primary" for="BLOOD" >Blood Group</label>
-						<select id="blood" name="BLOOD" required class="form-control input-sm">	
+						<select id="blood" name="BLOOD" required class="form-control input-sm">
 							<option value="">Select Blood</option>
 							<option value="A+">A+</option>
 							<option value="B+">B+</option>
@@ -183,7 +197,7 @@ INSERT INTO blood_donor
 								<label class="control-label text-primary" for="EMAIL" >Email ID</label>
                                 <input type="email"  required name="EMAIL" id="EMAIL" class="form-control" placeholder="Email Address">
                           </div>
-	
+
 						  <div class="form-group">
 								<label class="control-label text-primary" for="COUNTRY">Country</label>
                                 <select name="COUNTRY" id="COUNTRY" required class="form-control">
@@ -201,7 +215,7 @@ INSERT INTO blood_donor
 								?>
 								</select>
                           </div>
-						  
+
 							<div class="form-group">
 								<label class="control-label text-primary" for="STATE">State</label>
                                 <select name="STATE" id="STATE" required class="form-control">
@@ -216,18 +230,18 @@ INSERT INTO blood_donor
 											echo "<option value='{$row['STATE_ID']}'>{$row['STATE_NAME']}	</option>";
 										}
 									}
-									
+
 								?>
 								</select>
                           </div>
-						  
+
 
 						  <div class="form-group">
 								<label class="control-label text-primary" for="CITY" >City</label>
                                 <select name="CITY" id="CITY" required class="form-control">
 								<option value="">Select City</option>
 								<?php
-								
+
 									$sql="SELECT CITY_NAME,CITY_ID FROM city ORDER BY CITY_NAME";
 									$result=$con->query($sql);
 									if($result->num_rows>0)
@@ -237,17 +251,17 @@ INSERT INTO blood_donor
 										echo "<option value='{$row['CITY_ID']}'>{$row['CITY_NAME']}	</option>";
 										}
 									}
-									
+
 								?>
 								</select>
 
                           </div>
-						  
+
 						  <div class="form-group">
 							<label class="control-label text-primary" for="AREA" >Area</label>
                                 <input type="text" required name="AREA" id="AREA" class="form-control" placeholder="Insert Area">
                           </div>
-						  
+
 						   					  <div class="form-group">
 								<label class="control-label text-primary" for="ADDRESS">Address</label>
                                 <textarea required name="ADDRESS" id="ADDRESS" rows="5" style="resize:none;"class="form-control" placeholder="Full Address"></textarea>
@@ -257,11 +271,11 @@ INSERT INTO blood_donor
 								<label class="control-label text-primary" for="PINCODE">Pincode</label>
                                 <input type="text" required name="PINCODE" id="PINCODE" class="form-control" placeholder="Insert Pincode">
                           </div>
-						  
-						  
-						   
-						  
-						  
+
+
+
+
+
 						   <div class="form-group">
 								<label class="control-label text-primary" for="CONTACT_1" >Contact-1</label>
                                 <input type="text" required name="CONTACT_1" id="CONTACT_1" class="form-control" placeholder="Contact No-1">
@@ -276,14 +290,14 @@ INSERT INTO blood_donor
 							</div>
 							<div id="volu">
 						<div class="form-group">
-										
+
 								<select name="VOLUNTARY"  id="VOLUNTARY"   class="form-control input-sm">
 									<option value="">Select</option>
 									<option value="Yes">Yes</option>
 									<option selected value="No">No</option>
-									
+
 								</select>
-		
+
                           </div>
 						 <div class="form-group">
 						 						<input type="text"  name="VOLUNTARY_GROUP" id="VOLUNTARY_GROUP"  class="form-control" placeholder="Voluntary Group Name" value="Nill">
@@ -300,22 +314,22 @@ INSERT INTO blood_donor
 									<option value="">Select</option>
 									<option value="Yes" >Yes</option>
 									<option value="No" selected>No</option>
-									
+
 								</select>
 						</div>
-						
+
 							<div class="form-group">
 							<label class="control-label text-success" for="fileToUpload" >Upload Photo</label>
 							<input type="file" class="form-control"  name="fileToUpload">
 						  </div>
-						
+
 							  <div class="form-group">
-								<label class="control-label text-success"><input type="checkbox" checked id="c2">&nbsp; I have read the eligibility criteria and confirm that i am eligible to donate blood.</label> 
+								<label class="control-label text-success"><input type="checkbox" checked id="c2">&nbsp; I have read the eligibility criteria and confirm that i am eligible to donate blood.</label>
 								<label class="control-label text-success"><input type="checkbox" checked id="c3" >&nbsp; I agree to the Term and Conditions and consent to have my contact and donor information published to the potential blood recipients.</label>
 						  </div>
-						
-					
-						
+
+
+
 						  <div class="form-group">
 							<button class="btn btn-primary" type="submit" name="submit" >Registar Now</button>
 						  </div>
@@ -323,12 +337,12 @@ INSERT INTO blood_donor
                     </div>
                 </div>
             </div>
-			 
-            
+
+
         </div>
-        
-       
-    </div>    
+
+
+    </div>
 
  <?php include("footer.php"); ?>
  <script>
@@ -347,7 +361,7 @@ INSERT INTO blood_donor
 								$("#new").show(100);
 							}
 						});
-						
+
 						/*
 						$("#CITY").change(function(){
 							var city=$("#CITY").val();
@@ -356,10 +370,10 @@ INSERT INTO blood_donor
 							//	alert(data);
 								$("#STATE").html(data);
 							});
-							
+
 						});*/
-						
-						
+
+
 						$("#COUNTRY").change(function(){
 							var countr=$("#COUNTRY").val();
 							//alert(city);
@@ -367,9 +381,9 @@ INSERT INTO blood_donor
 							//	alert(data);
 								$("#STATE").html(data);
 							});
-							
+
 						});
-						
+
 							$("#STATE").change(function(){
 							var stid=$("#STATE").val();
 							//alert(city);
@@ -377,26 +391,26 @@ INSERT INTO blood_donor
 							//	alert(data);
 								$("#CITY").html(data);
 							});
-							
+
 						});
-					
-						
-							
+
+
+
 				});
-	
-	
+
+
   $(function() {
     var availableTags = [
-      <?php 
+      <?php
 	  $sql="SELECT AREA_NAME FROM area";
 							$result=$con->query($sql);
-							
+
 							if($result->num_rows>0)
 							{
 								$i=0;
 								$n=$result->num_rows;
 								while($row=$result->fetch_assoc())
-								{   
+								{
 									$i++;
 									if($n!=$i)
 									{
@@ -407,18 +421,18 @@ INSERT INTO blood_donor
 										echo '"'.$row['AREA_NAME'].'"';
 									}
 								}
-								
+
 							}
-	  
-	  
+
+
 	  ?>
     ];
     $( "#AREA" ).autocomplete({
       source: availableTags
     });
   });
-  
+
  </script>
- 
+
 </body>
 </html>
