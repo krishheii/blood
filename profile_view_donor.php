@@ -15,12 +15,13 @@ include("config.php");
 	<div class="row">
 
 		<div class="col-sm-9" >
-			<h3 class='text-primary'><i class="fa fa-users"></i> YOUR PROFILE </h3><hr>
+			<h3 class='text-primary'><i class="fa fa-users"></i> Donor Details </h3><hr>
 		<div class="row">
 		<?php
-		if(isset($_GET["id"]))
+		if(isset($_POST["password"]))
 		{
-			$sql="SELECT * FROM blood_donor WHERE DONOR_ID=".$_GET["id"];
+			$pass = $_POST["password"];
+			$sql="SELECT * FROM blood_donor WHERE password ='".$pass."'";
 			$result=$con->query($sql);
 			if($result->num_rows>0)
 			{
@@ -30,7 +31,7 @@ include("config.php");
 		<div class="col-md-4">
 					<div class="panel">
 					<div class="panel-body">
-					<img src="<?php echo $row["DONOR_PIC"];?>" class="image-rounded" height="250px" width="100%">
+					<img src="<?php echo $row["DONOR_PIC"];?>" class="image-rounded" height="300px" width="100%">
 			</div>
 			</div>
 
@@ -119,11 +120,11 @@ include("config.php");
 					$status=$row["STATUS"];
 					if($status==0)
 					{
-						echo'<a href="?id='.$row["DONOR_ID"].'" class="btn btn-sm btn-danger">DEACTIVATED</a>';
+						echo'<button class="btn btn-sm btn-danger">Deactivated</button>';
 					}
 					else
 					{
-							echo'<a href="?id='.$row["DONOR_ID"].'" class="btn btn-sm btn-success">ACTIVATED</a>';
+							echo'<button class="btn btn-sm btn-success">Activaed</button>';
 					}
 
 				?></td>
@@ -136,18 +137,16 @@ include("config.php");
 		<?php
 			}
 		}
-		else
-		{
-		echo "<script>window.open('admin_donor.php','_self');</script>";
-		}
+
 
 		?>
+
+
 
 		</div>
 		</div>
 	</div>
 </div>
-
 
 	 <?php include("admin_footer.php"); ?>
   <script>
