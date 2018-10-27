@@ -2,7 +2,7 @@
   <div class=" container-fluid">
     <div class="row">
       <div class="col-sm-12" >
-		<p align="center">Copyright &copy; Blood Bank</p>
+		<p align="center">Copyright &copy; RIT_Project</p>
       </div><!-- col-sm-6 -->
     </div><!-- row -->
   </div><!-- content container -->
@@ -13,7 +13,7 @@
 <script>
 	$(function() {
 
-	$(".DATES").datepicker({ 
+	$(".DATES").datepicker({
 
 dateFormat: "yy-mm-dd",
 changeMonth: true,
