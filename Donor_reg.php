@@ -104,9 +104,9 @@ $cityname=$_POST["CITY"];
 
 $sql="
 INSERT INTO blood_donor
-(username,password,NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, VOLUNTARY, VOLUNTARY_GROUP,NEW_DONOR, LAST_D_DATE, DONOR_PIC,COUNTRY)
+(Triglycerides,LDL,Cholesterol,Glucose,username,password,NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, VOLUNTARY, VOLUNTARY_GROUP,NEW_DONOR, LAST_D_DATE, DONOR_PIC,COUNTRY)
  VALUES
- ('{$_POST["USERNAME"]}','{$_POST["PASSWORD"]}','{$_POST["NAME"]}', '{$_POST["FATHER_NAME"]}', '{$_POST["GENDER"]}', '{$_POST["DOB"]}', '{$_POST["BLOOD"]}', '{$_POST["BODY_WEIGHT"]}', '{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["VOLUNTARY"]}', '{$_POST["VOLUNTARY_GROUP"]}', '{$_POST["NEW_DONOR"]}','{$_POST["LAST_D_DATE"]}', '{$img}','{$country}');";
+ ('{$_POST["Triglycerides"]}','{$_POST["LDL"]}','{$_POST["Cholesterol"]}','{$_POST["Glucose"]}','{$_POST["USERNAME"]}','{$_POST["PASSWORD"]}','{$_POST["NAME"]}', '{$_POST["FATHER_NAME"]}', '{$_POST["GENDER"]}', '{$_POST["DOB"]}', '{$_POST["BLOOD"]}', '{$_POST["BODY_WEIGHT"]}', '{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["VOLUNTARY"]}', '{$_POST["VOLUNTARY_GROUP"]}', '{$_POST["NEW_DONOR"]}','{$_POST["LAST_D_DATE"]}', '{$img}','{$country}');";
 						if($con->query($sql))
 							{
 								echo '
@@ -317,6 +317,33 @@ INSERT INTO blood_donor
 
 								</select>
 						</div>
+
+						<div class="form-group">
+						  <h3 align="center" class="control-label text-primary" >Enter Test Details</h3>
+							<label class="control-label text-primary" for="Glucose" >Glucose</label>
+							<input type="text" placeholder="Test count" id="Glucose" name="Glucose"  required class="form-control input-sm">
+						</div>
+
+						<div class="form-group">
+
+							<label class="control-label text-primary" for="Cholesterol" >Cholesterol</label>
+							<input type="text" placeholder="Test count" id="Cholesterol" name="Cholesterol"  required class="form-control input-sm">
+						</div>
+
+						<div class="form-group">
+
+							<label class="control-label text-primary" for="LDL" >LDL</label>
+							<input type="text" placeholder="Test count" id="LDL" name="LDL"  required class="form-control input-sm">
+						</div>
+
+
+												<div class="form-group">
+
+													<label class="control-label text-primary" for="Triglycerides" >Triglycerides</label>
+													<input type="text" placeholder="Test count" id="Triglycerides" name="Triglycerides"  required class="form-control input-sm">
+												</div>
+
+
 
 							<div class="form-group">
 							<label class="control-label text-success" for="fileToUpload" >Upload Photo</label>
