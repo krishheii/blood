@@ -154,8 +154,7 @@ INSERT INTO blood_donor
 									<option value="">Select Gender</option>
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
-									<option value="Thirunangai">Thirunangai</option>
-									<option value="Thirunambi">Thirunambi</option>
+
 								</select>
 						</div>
 
@@ -169,24 +168,15 @@ INSERT INTO blood_donor
 							<label class="control-label text-primary" for="BLOOD" >Blood Group</label>
 						<select id="blood" name="BLOOD" required class="form-control input-sm">
 							<option value="">Select Blood</option>
-							<option value="A+">A+</option>
-							<option value="B+">B+</option>
-							<option value="O+">O+</option>
-							<option value="AB+">AB+</option>
-							<option value="A1+">A1+</option>
-							<option value="A2+">A2+</option>
-							<option value="A1B+">A1B+</option>
-							<option value="A2B+">A2B+</option>
-							<option value="A-">A-</option>
-							<option value="B-">B-</option>
-							<option value="O-">O-</option>
-							<option value="AB-">AB-</option>
-							<option value="A1-">A1-</option>
-							<option value="A2-">A2-</option>
-							<option value="A1B">A1B-</option>
-							<option value="A2B">A2B-</option>
-							<option value="A2B">Bombay o+</option>
-							<option value="A2B">Bombay o-</option>
+							<option value="AB-negative">AB-negative</option>
+							<option value="B-negative">B-negative</option>
+							<option value="AB-positive">AB-positive </option>
+							<option value="A-negative">A-negative</option>
+							<option value="O-negative">O-negative</option>
+							<option value="B-positive">B-positive </option>
+							<option value="A-positive">A-positive </option>
+							<option value="-positive">O-positive</option>
+
 							</select>
 						</div>
 						<div class="form-group">
