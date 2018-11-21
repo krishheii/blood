@@ -127,6 +127,8 @@ include("config.php");
 							echo'<button class="btn btn-sm btn-success">Activaed</button>';
 					}
 
+
+
 				?></td>
 			</tr>
 
@@ -136,7 +138,11 @@ include("config.php");
 
 		<?php
 			}
+
+			else {echo '<h3 align="center">Wrong Password,Please enter a valid password<h3>';  }
 		}
+
+
 
 
 		?>
